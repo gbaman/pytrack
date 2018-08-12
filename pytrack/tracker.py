@@ -116,7 +116,7 @@ class Tracker(object):
 		"""
 		if not self.camera:
 			self.camera = SSDVCamera()
-		if self.LoRaMode == 1:
+		if self.LoRaMode == 1 or self.LoRaMode == 3:
 			print("Enable camera for LoRa")
 			self.camera.add_schedule('LoRa0', self.LoRaPayloadID, path, period, width, height)
 		else:
